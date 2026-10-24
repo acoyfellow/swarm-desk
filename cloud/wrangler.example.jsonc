@@ -1,0 +1,14 @@
+{
+  "name": "swarm-desk",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-04-01",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "swarm.example.com", "custom_domain": true }],
+  "containers": [{ "class_name": "SwarmContainer", "image": "registry.cloudflare.com/<account id>/swarm-desk:v1", "max_instances": 1, "instance_type": "standard-2" }],
+  "ai": { "binding": "AI" },
+  "kv_namespaces": [{ "binding": "LEDGER", "id": "<kv namespace id>" }],
+  "durable_objects": { "bindings": [{ "name": "SWARM", "class_name": "SwarmContainer" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["SwarmContainer"] }],
+  "vars": { "ACCESS_TEAM": "https://<team>.cloudflareaccess.com", "ACCESS_AUD": "<access application aud>" }
+}

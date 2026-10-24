@@ -1,0 +1,1317 @@
+{
+  "rows": [
+    {
+      "task": "basis-points",
+      "ms": 24954,
+      "decision": "ship",
+      "attempts": 8,
+      "winner": 4,
+      "visible_pass": 8,
+      "hidden_pass": 8,
+      "single_agent_rate": 1.0,
+      "winner_p_ship": 0.9026,
+      "winner_hidden_pass": true,
+      "any_hidden_pass": true,
+      "tokens_in": 293351,
+      "tokens_out": 14181,
+      "attempts_detail": [
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 8,
+          "p_ship": 0.8896,
+          "turns": 5
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 1,
+          "p_ship": 0.8742,
+          "turns": 6
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 7,
+          "p_ship": 0.8831,
+          "turns": 6
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 4,
+          "p_ship": 0.9026,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 2,
+          "p_ship": 0.7897,
+          "turns": 6
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 6,
+          "p_ship": 0.8306,
+          "turns": 9
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 5,
+          "p_ship": 0.8727,
+          "turns": 6
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 3,
+          "p_ship": 0.8203,
+          "turns": 10
+        }
+      ]
+    },
+    {
+      "task": "csv",
+      "ms": 31503,
+      "decision": "ship",
+      "attempts": 8,
+      "winner": 2,
+      "visible_pass": 8,
+      "hidden_pass": 8,
+      "single_agent_rate": 1.0,
+      "winner_p_ship": 0.9061,
+      "winner_hidden_pass": true,
+      "any_hidden_pass": true,
+      "tokens_in": 427344,
+      "tokens_out": 20985,
+      "attempts_detail": [
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 6,
+          "p_ship": 0.8922,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 8,
+          "p_ship": 0.8851,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 1,
+          "p_ship": 0.8583,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 5,
+          "p_ship": 0.8982,
+          "turns": 9
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 3,
+          "p_ship": 0.8739,
+          "turns": 9
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 2,
+          "p_ship": 0.9061,
+          "turns": 9
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 7,
+          "p_ship": 0.8968,
+          "turns": 9
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 4,
+          "p_ship": 0.8644,
+          "turns": 9
+        }
+      ]
+    },
+    {
+      "task": "currency-symbols",
+      "ms": 27289,
+      "decision": "ship",
+      "attempts": 8,
+      "winner": 8,
+      "visible_pass": 8,
+      "hidden_pass": 8,
+      "single_agent_rate": 1.0,
+      "winner_p_ship": 0.948,
+      "winner_hidden_pass": true,
+      "any_hidden_pass": true,
+      "tokens_in": 443344,
+      "tokens_out": 18902,
+      "attempts_detail": [
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 8,
+          "p_ship": 0.948,
+          "turns": 9
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 5,
+          "p_ship": 0.9422,
+          "turns": 10
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 7,
+          "p_ship": 0.9451,
+          "turns": 11
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 2,
+          "p_ship": 0.942,
+          "turns": 9
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 3,
+          "p_ship": 0.9332,
+          "turns": 9
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 6,
+          "p_ship": 0.9356,
+          "turns": 11
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 4,
+          "p_ship": 0.93,
+          "turns": 10
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 1,
+          "p_ship": 0.943,
+          "turns": 10
+        }
+      ]
+    },
+    {
+      "task": "format-options",
+      "ms": 20784,
+      "decision": "ship",
+      "attempts": 8,
+      "winner": 5,
+      "visible_pass": 8,
+      "hidden_pass": 8,
+      "single_agent_rate": 1.0,
+      "winner_p_ship": 0.9319,
+      "winner_hidden_pass": true,
+      "any_hidden_pass": true,
+      "tokens_in": 276787,
+      "tokens_out": 15028,
+      "attempts_detail": [
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 2,
+          "p_ship": 0.8764,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 1,
+          "p_ship": 0.9288,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 6,
+          "p_ship": 0.9283,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 5,
+          "p_ship": 0.9319,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 3,
+          "p_ship": 0.8852,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 8,
+          "p_ship": 0.9035,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 4,
+          "p_ship": 0.8696,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 7,
+          "p_ship": 0.874,
+          "turns": 8
+        }
+      ]
+    },
+    {
+      "task": "free-shipping",
+      "ms": 24398,
+      "decision": "ship",
+      "attempts": 8,
+      "winner": 4,
+      "visible_pass": 8,
+      "hidden_pass": 8,
+      "single_agent_rate": 1.0,
+      "winner_p_ship": 0.8569,
+      "winner_hidden_pass": true,
+      "any_hidden_pass": true,
+      "tokens_in": 267286,
+      "tokens_out": 18212,
+      "attempts_detail": [
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 1,
+          "p_ship": 0.8063,
+          "turns": 6
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 5,
+          "p_ship": 0.839,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 3,
+          "p_ship": 0.8215,
+          "turns": 6
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 2,
+          "p_ship": 0.7734,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 7,
+          "p_ship": 0.8244,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 8,
+          "p_ship": 0.8051,
+          "turns": 6
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 4,
+          "p_ship": 0.8569,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 6,
+          "p_ship": 0.661,
+          "turns": 7
+        }
+      ]
+    },
+    {
+      "task": "fx",
+      "ms": 31519,
+      "decision": "ship",
+      "attempts": 8,
+      "winner": 6,
+      "visible_pass": 8,
+      "hidden_pass": 8,
+      "single_agent_rate": 1.0,
+      "winner_p_ship": 0.9197,
+      "winner_hidden_pass": true,
+      "any_hidden_pass": true,
+      "tokens_in": 364794,
+      "tokens_out": 20537,
+      "attempts_detail": [
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 6,
+          "p_ship": 0.9197,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 1,
+          "p_ship": 0.8433,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 7,
+          "p_ship": 0.8649,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 3,
+          "p_ship": 0.908,
+          "turns": 9
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 5,
+          "p_ship": 0.894,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 4,
+          "p_ship": 0.9057,
+          "turns": 9
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 8,
+          "p_ship": 0.9183,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 2,
+          "p_ship": 0.9021,
+          "turns": 9
+        }
+      ]
+    },
+    {
+      "task": "gift-card",
+      "ms": 29131,
+      "decision": "ship",
+      "attempts": 8,
+      "winner": 5,
+      "visible_pass": 8,
+      "hidden_pass": 8,
+      "single_agent_rate": 1.0,
+      "winner_p_ship": 0.9513,
+      "winner_hidden_pass": true,
+      "any_hidden_pass": true,
+      "tokens_in": 280747,
+      "tokens_out": 16965,
+      "attempts_detail": [
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 1,
+          "p_ship": 0.9354,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 3,
+          "p_ship": 0.9425,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 7,
+          "p_ship": 0.9239,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 4,
+          "p_ship": 0.9077,
+          "turns": 9
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 8,
+          "p_ship": 0.9483,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 2,
+          "p_ship": 0.9448,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 6,
+          "p_ship": 0.9078,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 5,
+          "p_ship": 0.9513,
+          "turns": 9
+        }
+      ]
+    },
+    {
+      "task": "import",
+      "ms": 27816,
+      "decision": "ship",
+      "attempts": 8,
+      "winner": 2,
+      "visible_pass": 8,
+      "hidden_pass": 8,
+      "single_agent_rate": 1.0,
+      "winner_p_ship": 0.9275,
+      "winner_hidden_pass": true,
+      "any_hidden_pass": true,
+      "tokens_in": 296427,
+      "tokens_out": 18537,
+      "attempts_detail": [
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 2,
+          "p_ship": 0.9275,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 6,
+          "p_ship": 0.9237,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 5,
+          "p_ship": 0.9116,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 4,
+          "p_ship": 0.9044,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 8,
+          "p_ship": 0.9072,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 3,
+          "p_ship": 0.8934,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 7,
+          "p_ship": 0.9185,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 1,
+          "p_ship": 0.8898,
+          "turns": 8
+        }
+      ]
+    },
+    {
+      "task": "late-fee",
+      "ms": 23704,
+      "decision": "ship",
+      "attempts": 8,
+      "winner": 5,
+      "visible_pass": 8,
+      "hidden_pass": 8,
+      "single_agent_rate": 1.0,
+      "winner_p_ship": 0.9389,
+      "winner_hidden_pass": true,
+      "any_hidden_pass": true,
+      "tokens_in": 339643,
+      "tokens_out": 15816,
+      "attempts_detail": [
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 1,
+          "p_ship": 0.9075,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 3,
+          "p_ship": 0.9282,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 6,
+          "p_ship": 0.9321,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 4,
+          "p_ship": 0.9302,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 2,
+          "p_ship": 0.9111,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 5,
+          "p_ship": 0.9389,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 8,
+          "p_ship": 0.9334,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 7,
+          "p_ship": 0.9376,
+          "turns": 8
+        }
+      ]
+    },
+    {
+      "task": "loyalty",
+      "ms": 27891,
+      "decision": "person",
+      "attempts": 8,
+      "winner": 8,
+      "visible_pass": 8,
+      "hidden_pass": 8,
+      "single_agent_rate": 1.0,
+      "winner_p_ship": 0.8311,
+      "winner_hidden_pass": true,
+      "any_hidden_pass": true,
+      "tokens_in": 428366,
+      "tokens_out": 15541,
+      "attempts_detail": [
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 8,
+          "p_ship": 0.8311,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 2,
+          "p_ship": 0.7961,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 3,
+          "p_ship": 0.7522,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 1,
+          "p_ship": 0.786,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 7,
+          "p_ship": 0.7861,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 6,
+          "p_ship": 0.7963,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 4,
+          "p_ship": 0.7874,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 5,
+          "p_ship": 0.7994,
+          "turns": 12
+        }
+      ]
+    },
+    {
+      "task": "parse-options",
+      "ms": 26784,
+      "decision": "ship",
+      "attempts": 8,
+      "winner": 8,
+      "visible_pass": 8,
+      "hidden_pass": 8,
+      "single_agent_rate": 1.0,
+      "winner_p_ship": 0.9176,
+      "winner_hidden_pass": true,
+      "any_hidden_pass": true,
+      "tokens_in": 307992,
+      "tokens_out": 16743,
+      "attempts_detail": [
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 4,
+          "p_ship": 0.9096,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 6,
+          "p_ship": 0.8972,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 5,
+          "p_ship": 0.9094,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 8,
+          "p_ship": 0.9176,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 7,
+          "p_ship": 0.905,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 3,
+          "p_ship": 0.902,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 2,
+          "p_ship": 0.8872,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 1,
+          "p_ship": 0.8966,
+          "turns": 9
+        }
+      ]
+    },
+    {
+      "task": "price-range",
+      "ms": 22374,
+      "decision": "ship",
+      "attempts": 8,
+      "winner": 6,
+      "visible_pass": 8,
+      "hidden_pass": 8,
+      "single_agent_rate": 1.0,
+      "winner_p_ship": 0.9186,
+      "winner_hidden_pass": true,
+      "any_hidden_pass": true,
+      "tokens_in": 312960,
+      "tokens_out": 15853,
+      "attempts_detail": [
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 2,
+          "p_ship": 0.8984,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 7,
+          "p_ship": 0.8889,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 4,
+          "p_ship": 0.8804,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 3,
+          "p_ship": 0.8764,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 6,
+          "p_ship": 0.9186,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 1,
+          "p_ship": 0.9124,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 8,
+          "p_ship": 0.8965,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 5,
+          "p_ship": 0.9182,
+          "turns": 7
+        }
+      ]
+    },
+    {
+      "task": "refund",
+      "ms": 33864,
+      "decision": "ship",
+      "attempts": 8,
+      "winner": 2,
+      "visible_pass": 8,
+      "hidden_pass": 8,
+      "single_agent_rate": 1.0,
+      "winner_p_ship": 0.9362,
+      "winner_hidden_pass": true,
+      "any_hidden_pass": true,
+      "tokens_in": 380493,
+      "tokens_out": 19816,
+      "attempts_detail": [
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 5,
+          "p_ship": 0.9262,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 4,
+          "p_ship": 0.8658,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 7,
+          "p_ship": 0.9175,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 8,
+          "p_ship": 0.9145,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 3,
+          "p_ship": 0.8345,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 2,
+          "p_ship": 0.9362,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 1,
+          "p_ship": 0.9279,
+          "turns": 9
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 6,
+          "p_ship": 0.9159,
+          "turns": 10
+        }
+      ]
+    },
+    {
+      "task": "rounding",
+      "ms": 30825,
+      "decision": "person",
+      "attempts": 8,
+      "winner": 3,
+      "visible_pass": 8,
+      "hidden_pass": 8,
+      "single_agent_rate": 1.0,
+      "winner_p_ship": 0.5694,
+      "winner_hidden_pass": true,
+      "any_hidden_pass": true,
+      "tokens_in": 409617,
+      "tokens_out": 19379,
+      "attempts_detail": [
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 3,
+          "p_ship": 0.5694,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 4,
+          "p_ship": 0.4454,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 5,
+          "p_ship": 0.4897,
+          "turns": 9
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 7,
+          "p_ship": 0.5144,
+          "turns": 9
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 1,
+          "p_ship": 0.5186,
+          "turns": 10
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 2,
+          "p_ship": 0.4943,
+          "turns": 10
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 8,
+          "p_ship": 0.4961,
+          "turns": 11
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 6,
+          "p_ship": 0.4737,
+          "turns": 11
+        }
+      ]
+    },
+    {
+      "task": "split",
+      "ms": 57806,
+      "decision": "ship",
+      "attempts": 8,
+      "winner": 4,
+      "visible_pass": 8,
+      "hidden_pass": 8,
+      "single_agent_rate": 1.0,
+      "winner_p_ship": 0.8922,
+      "winner_hidden_pass": true,
+      "any_hidden_pass": true,
+      "tokens_in": 446702,
+      "tokens_out": 33360,
+      "attempts_detail": [
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 7,
+          "p_ship": 0.8229,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 2,
+          "p_ship": 0.8629,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 1,
+          "p_ship": 0.8584,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 5,
+          "p_ship": 0.8668,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 8,
+          "p_ship": 0.8272,
+          "turns": 9
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 3,
+          "p_ship": 0.852,
+          "turns": 8
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 4,
+          "p_ship": 0.8922,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 6,
+          "p_ship": 0.8248,
+          "turns": 8
+        }
+      ]
+    },
+    {
+      "task": "tips",
+      "ms": 23199,
+      "decision": "ship",
+      "attempts": 8,
+      "winner": 1,
+      "visible_pass": 8,
+      "hidden_pass": 8,
+      "single_agent_rate": 1.0,
+      "winner_p_ship": 0.9252,
+      "winner_hidden_pass": true,
+      "any_hidden_pass": true,
+      "tokens_in": 271287,
+      "tokens_out": 15065,
+      "attempts_detail": [
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 1,
+          "p_ship": 0.9252,
+          "turns": 6
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 5,
+          "p_ship": 0.9225,
+          "turns": 6
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 4,
+          "p_ship": 0.9164,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 8,
+          "p_ship": 0.9214,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 3,
+          "p_ship": 0.8695,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 6,
+          "p_ship": 0.9101,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 2,
+          "p_ship": 0.9234,
+          "turns": 7
+        },
+        {
+          "hidden": 0,
+          "visible": 0,
+          "outcome": "done",
+          "agent": 7,
+          "p_ship": 0.9173,
+          "turns": 7
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "model": "claude-sonnet-5",
+    "tokens_in": 5547140,
+    "tokens_out": 294920,
+    "shipped": 14,
+    "tasks": 16,
+    "agents_per_task": 8,
+    "one_agent_expected_pass": 16.0,
+    "swarm_pick_pass": 16,
+    "oracle_any_pass": 16,
+    "shipped_and_right": 14,
+    "shipped_and_wrong": 0,
+    "held_for_person": 2,
+    "held_but_right": 2,
+    "wall_s": 124.4,
+    "usd_list_price": 21.07
+  }
+}

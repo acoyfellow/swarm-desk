@@ -1,0 +1,244 @@
+{
+  "specs": [
+    {
+      "max_tokens": 4000,
+      "max_turns": 30,
+      "model": "claude-sonnet-5",
+      "name": "sonnet5-full",
+      "price_per_m": {
+        "in": 3,
+        "out": 15
+      },
+      "prompt": "default",
+      "tools": [
+        "list_files",
+        "read_file",
+        "write_file",
+        "edit_file",
+        "grep",
+        "run_tests",
+        "done"
+      ]
+    },
+    {
+      "max_tokens": 4000,
+      "max_turns": 30,
+      "model": "claude-haiku-4-5",
+      "name": "haiku45-full",
+      "price_per_m": {
+        "in": 1,
+        "out": 5
+      },
+      "prompt": "default",
+      "tools": [
+        "list_files",
+        "read_file",
+        "write_file",
+        "edit_file",
+        "grep",
+        "run_tests",
+        "done"
+      ]
+    },
+    {
+      "max_tokens": 4000,
+      "max_turns": 30,
+      "model": "claude-sonnet-5",
+      "name": "sonnet5-blind",
+      "price_per_m": {
+        "in": 3,
+        "out": 15
+      },
+      "prompt": "default",
+      "tools": [
+        "list_files",
+        "read_file",
+        "write_file",
+        "edit_file",
+        "grep",
+        "done"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "hidden": true,
+      "visible": true,
+      "spec": "haiku45-full",
+      "task": "rounding",
+      "ms": 60170,
+      "outcome": "done",
+      "repeat": 1,
+      "turns": 14,
+      "p_ship": 0.8579,
+      "tokens_in": 86069,
+      "tokens_out": 4262,
+      "usd": 0.1074,
+      "ship": true,
+      "tests_run": 2
+    },
+    {
+      "hidden": true,
+      "visible": true,
+      "spec": "haiku45-full",
+      "task": "tips",
+      "ms": 42596,
+      "outcome": "done",
+      "repeat": 1,
+      "turns": 8,
+      "p_ship": 0.9701,
+      "tokens_in": 35900,
+      "tokens_out": 2675,
+      "usd": 0.0493,
+      "ship": true,
+      "tests_run": 1
+    },
+    {
+      "hidden": true,
+      "visible": true,
+      "spec": "sonnet5-blind",
+      "task": "rounding",
+      "ms": 36870,
+      "outcome": "done",
+      "repeat": 1,
+      "turns": 9,
+      "p_ship": 0.851,
+      "tokens_in": 44111,
+      "tokens_out": 2663,
+      "usd": 0.1723,
+      "ship": true,
+      "tests_run": 0
+    },
+    {
+      "hidden": true,
+      "visible": true,
+      "spec": "sonnet5-blind",
+      "task": "tips",
+      "ms": 40572,
+      "outcome": "done",
+      "repeat": 1,
+      "turns": 9,
+      "p_ship": 0.9826,
+      "tokens_in": 41084,
+      "tokens_out": 1915,
+      "usd": 0.152,
+      "ship": true,
+      "tests_run": 0
+    },
+    {
+      "hidden": true,
+      "visible": true,
+      "spec": "sonnet5-full",
+      "task": "rounding",
+      "ms": 35833,
+      "outcome": "done",
+      "repeat": 1,
+      "turns": 7,
+      "p_ship": 0.7838,
+      "tokens_in": 31341,
+      "tokens_out": 1970,
+      "usd": 0.1236,
+      "ship": false,
+      "tests_run": 1
+    },
+    {
+      "hidden": true,
+      "visible": true,
+      "spec": "sonnet5-full",
+      "task": "tips",
+      "ms": 31830,
+      "outcome": "done",
+      "repeat": 1,
+      "turns": 7,
+      "p_ship": 0.9827,
+      "tokens_in": 37153,
+      "tokens_out": 1730,
+      "usd": 0.1374,
+      "ship": true,
+      "tests_run": 1
+    }
+  ],
+  "tasks": [
+    "tips",
+    "rounding"
+  ],
+  "repeats": 1,
+  "wall_ms": 62871,
+  "cells": 6,
+  "by_spec": [
+    {
+      "spec": "sonnet5-full",
+      "tools": [
+        "list_files",
+        "read_file",
+        "write_file",
+        "edit_file",
+        "grep",
+        "run_tests",
+        "done"
+      ],
+      "shipped": 1,
+      "hidden_pass": 2,
+      "usd": 0.26,
+      "model": "claude-sonnet-5",
+      "cells": 2,
+      "crashed_or_model_error": 0,
+      "held_right": 1,
+      "hidden_pass_rate": 1.0,
+      "max_s": 35.8,
+      "mean_turns": 7.0,
+      "p50_s": 35.8,
+      "shipped_wrong": 0,
+      "usd_per_pass": 0.131
+    },
+    {
+      "spec": "haiku45-full",
+      "tools": [
+        "list_files",
+        "read_file",
+        "write_file",
+        "edit_file",
+        "grep",
+        "run_tests",
+        "done"
+      ],
+      "shipped": 2,
+      "hidden_pass": 2,
+      "usd": 0.16,
+      "model": "claude-haiku-4-5",
+      "cells": 2,
+      "crashed_or_model_error": 0,
+      "held_right": 0,
+      "hidden_pass_rate": 1.0,
+      "max_s": 60.2,
+      "mean_turns": 11.0,
+      "p50_s": 60.2,
+      "shipped_wrong": 0,
+      "usd_per_pass": 0.078
+    },
+    {
+      "spec": "sonnet5-blind",
+      "tools": [
+        "list_files",
+        "read_file",
+        "write_file",
+        "edit_file",
+        "grep",
+        "done"
+      ],
+      "shipped": 2,
+      "hidden_pass": 2,
+      "usd": 0.32,
+      "model": "claude-sonnet-5",
+      "cells": 2,
+      "crashed_or_model_error": 0,
+      "held_right": 0,
+      "hidden_pass_rate": 1.0,
+      "max_s": 40.6,
+      "mean_turns": 9.0,
+      "p50_s": 40.6,
+      "shipped_wrong": 0,
+      "usd_per_pass": 0.162
+    }
+  ]
+}

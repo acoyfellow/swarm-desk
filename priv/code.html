@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Swarm code · 16 coding agents at once</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@400;500;700&family=Google+Sans+Flex:opsz,wght@6..144,400..800&display=swap">
+<style>
+  :root { color-scheme: dark; --ok: #4fd18b; --human: #ffc56b; --bad: #ff6b6b; --work: #7fe3ff; --ink: #f2efe8; --dim: #a9a59c; --card: rgba(255,255,255,.05); --line: rgba(255,255,255,.1); }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; background: radial-gradient(1200px 700px at 70% 0%, #10202a, #04050a 70%); color: var(--ink); font-family: "Google Sans Flex", system-ui, sans-serif; }
+  main { max-width: 1280px; margin: 0 auto; padding: 36px 20px 72px; }
+  .kicker { font: 600 12px/1 "Google Sans Code", monospace; letter-spacing: .12em; text-transform: uppercase; color: var(--work); margin: 0 0 14px; }
+  h1 { font: 800 clamp(34px, 5vw, 70px)/.98 "Google Sans Flex", sans-serif; letter-spacing: -.035em; margin: 0 0 16px; max-width: 1000px; }
+  h1 em { font-style: normal; color: var(--work); }
+  .lede { font: 500 clamp(17px, 1.6vw, 21px)/1.45 "Google Sans Flex", sans-serif; color: #d8d4cb; max-width: 860px; margin: 0 0 24px; }
+  .flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 0 0 24px; }
+  .step { padding: 14px 16px; border-radius: 16px; background: var(--card); border: 1px solid var(--line); }
+  .step b { display: block; font: 700 12px/1 "Google Sans Code", monospace; color: var(--work); margin-bottom: 8px; letter-spacing: .04em; }
+  .step span { font: 500 15px/1.35 "Google Sans Flex", sans-serif; color: #e6e2d9; }
+  .bar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin-bottom: 16px; }
+  button { font: 700 17px/1 "Google Sans Flex", sans-serif; padding: 15px 28px; border-radius: 999px; border: 0; background: var(--ink); color: #05060a; cursor: pointer; }
+  button:disabled { opacity: .45; cursor: default; }
+  .clock { font: 800 clamp(40px, 5vw, 64px)/1 "Google Sans Code", monospace; color: var(--work); font-variant-numeric: tabular-nums; margin-left: auto; }
+  .note { font: 500 13px/1.3 "Google Sans Code", monospace; color: var(--dim); }
+  .outcomes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 12px; }
+  .out { padding: 16px; border-radius: 16px; background: var(--card); border: 1px solid var(--line); border-top: 4px solid var(--c); }
+  .out small { display: block; font: 600 11px/1.2 "Google Sans Code", monospace; text-transform: uppercase; letter-spacing: .06em; color: var(--dim); }
+  .out b { display: block; margin-top: 8px; font: 800 clamp(30px, 3.4vw, 44px)/1 "Google Sans Flex", sans-serif; font-variant-numeric: tabular-nums; }
+  .out span { display: block; margin-top: 6px; font: 500 13px/1.3 "Google Sans Flex", sans-serif; color: var(--dim); }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 0 0 16px; font: 500 13px/1.4 "Google Sans Code", monospace; color: var(--dim); }
+  .meta b { color: var(--ink); }
+  .tasks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .task { text-align: left; padding: 14px; border-radius: 16px; background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--state, rgba(255,255,255,.15)); color: var(--ink); cursor: pointer; font: inherit; min-height: 148px; display: flex; flex-direction: column; gap: 8px; transition: border-color .2s, background .2s; }
+  .task:hover { background: rgba(255,255,255,.08); }
+  .task.sel { outline: 2px solid var(--work); outline-offset: 2px; }
+  .task[data-s="working"], .task[data-s="judging"] { --state: var(--work); }
+  .task[data-s="ship"] { --state: var(--ok); }
+  .task[data-s="person"] { --state: var(--human); }
+  .task[data-s="bad"] { --state: var(--bad); }
+  .task .name { font: 700 15px/1.25 "Google Sans Flex", sans-serif; }
+  .task .id { font: 500 11px/1 "Google Sans Code", monospace; color: var(--dim); }
+  .task .now { font: 500 12px/1.35 "Google Sans Code", monospace; color: #cfe9f2; min-height: 32px; word-break: break-all; }
+  .task[data-s="working"] .now::before { content: "● "; color: var(--work); animation: pulse 1s infinite; }
+  .task .foot { margin-top: auto; display: flex; flex-wrap: wrap; gap: 6px; font: 600 11px/1 "Google Sans Code", monospace; }
+  .pill { padding: 5px 8px; border-radius: 99px; background: rgba(255,255,255,.08); color: #d8d4cb; }
+  .pill.ok { background: rgba(79,209,139,.18); color: #b6f5d2; }
+  .pill.no { background: rgba(255,107,107,.18); color: #ffc9c9; }
+  .pill.hm { background: rgba(255,197,107,.18); color: #ffe3b5; }
+  @keyframes pulse { 50% { opacity: .3; } }
+  .detail { margin-top: 16px; padding: 20px; border-radius: 18px; background: var(--ink); color: #05060a; }
+  .detail h2 { margin: 0 0 8px; font: 700 12px/1.2 "Google Sans Code", monospace; text-transform: uppercase; letter-spacing: .06em; color: #55534d; }
+  .detail h3 { margin: 0 0 6px; font: 800 22px/1.2 "Google Sans Flex", sans-serif; }
+  .detail p { margin: 0 0 12px; font: 500 15px/1.45 "Google Sans Flex", sans-serif; color: #3b3a36; }
+  .facts { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; }
+  .facts span { padding: 6px 10px; border-radius: 10px; background: #e6e2d9; font: 600 12px/1.2 "Google Sans Code", monospace; }
+  pre { margin: 0; max-height: 460px; overflow: auto; padding: 14px; border-radius: 12px; background: #0b0d12; color: #d8d4cb; font: 500 12px/1.5 "Google Sans Code", monospace; white-space: pre; }
+  pre .add { color: #8ff0b4; } pre .del { color: #ff9a9a; } pre .hd { color: #7fe3ff; }
+  .why { margin-top: 24px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .why div { padding: 16px; border-radius: 16px; background: var(--card); border: 1px solid var(--line); }
+  .why b { display: block; font: 700 15px/1.3 "Google Sans Flex", sans-serif; margin-bottom: 6px; }
+  .why span { font: 500 14px/1.45 "Google Sans Flex", sans-serif; color: #cfcbc2; }
+  footer { margin-top: 24px; font: 500 12px/1.6 "Google Sans Code", monospace; color: var(--dim); }
+  footer a { color: var(--dim); }
+  .ledger { margin: 0 0 18px; padding: 16px; border-radius: 16px; background: var(--card); border: 1px solid var(--line); }
+  .lhead { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; margin-bottom: 10px; }
+  .lhead h2 { margin: 0; font: 700 12px/1 "Google Sans Code", monospace; text-transform: uppercase; letter-spacing: .06em; color: var(--dim); }
+  .lhead p { margin: 0; font: 700 16px/1.3 "Google Sans Flex", sans-serif; }
+  .ltable { overflow-x: auto; max-height: 220px; overflow-y: auto; }
+  table { width: 100%; border-collapse: collapse; font: 500 13px/1.3 "Google Sans Code", monospace; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  th { color: var(--dim); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: .05em; position: sticky; top: 0; background: #0c1016; }
+  td.cost { color: #9dffb0; font-weight: 700; }
+  @media (max-width: 1000px) { .tasks { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 860px) { .flow, .outcomes { grid-template-columns: 1fr 1fr; } .why { grid-template-columns: 1fr; } .clock { margin-left: 0; } }
+  @media (max-width: 480px) { main { padding: 24px 14px 56px; } .tasks { grid-template-columns: 1fr; } .task { min-height: 0; } }
+</style>
+</head>
+<body>
+<main>
+  <p class="kicker">Swarm code · one coding agent per task</p>
+  <h1>16 coding tasks. <em>16 agents at once.</em> Code ships only what passes and Clef trusts.</h1>
+  <p class="lede">Each agent is a real coding agent: its own copy of the repository, a model in a tool loop, and a test runner. All 16 start at the same moment. When an agent finishes, its own test suite and Clef decide: ship, or send it to a person. Tests the agent never saw then grade the result.</p>
+  <div class="flow">
+    <div class="step"><b>1 · FAN OUT</b><span>16 BEAM processes, one per task, each with its own workspace.</span></div>
+    <div class="step"><b>2 · WORK</b><span>Sonnet reads, edits and runs the tests, up to 30 tool turns.</span></div>
+    <div class="step"><b>3 · DECIDE IN CODE</b><span>Suite green and Clef ship odds ≥ 85% → ship. Else → a person.</span></div>
+    <div class="step"><b>4 · GRADE</b><span>Hidden tests the agent never saw say if the ship was right.</span></div>
+  </div>
+
+  <div class="bar">
+    <button id="go" type="button">Go: 16 agents</button>
+    <span class="note" id="status">ready</span>
+    <div class="clock" id="clock">0.0 s</div>
+  </div>
+
+  <div class="outcomes">
+    <div class="out" style="--c:var(--ok)"><small>Shipped by code</small><b id="oShip">0</b><span>suite green, Clef ≥ 85%</span></div>
+    <div class="out" style="--c:var(--human)"><small>Sent to a person</small><b id="oPerson">0</b><span>failing suite or low odds</span></div>
+    <div class="out" style="--c:var(--work)"><small>Hidden tests passed</small><b id="oHidden">0/16</b><span>tests no agent saw</span></div>
+    <div class="out" style="--c:var(--bad)"><small>Wrong ships</small><b id="oWrong">0</b><span>shipped, then failed hidden tests</span></div>
+  </div>
+  <div class="meta">
+    <span>done <b id="mDone">0/16</b></span>
+    <span>tool calls <b id="mTools">0</b></span>
+    <span>test runs <b id="mTests">0</b></span>
+    <span>model cost <b id="mCost">$0.00</b></span>
+    <span>model <b>claude-sonnet-5</b> · judge <b>Clef</b></span>
+  </div>
+
+  <section class="ledger" aria-label="Every run so far">
+    <div class="lhead"><h2>Every run so far</h2><p id="lTotals">loading…</p></div>
+    <div class="ltable"><table><thead><tr><th>When (UTC)</th><th>Agents</th><th>Shipped</th><th>To a person</th><th>Hidden pass</th><th>Wrong ships</th><th>Time</th><th>Cost</th></tr></thead><tbody id="lRows"></tbody></table></div>
+  </section>
+
+  <div class="tasks" id="tasks" aria-label="One card per coding agent"></div>
+
+  <section class="detail" id="detail" aria-live="polite"><h2>Click any card</h2><p>See the task, what the agent did, how it was judged, and the diff it wrote.</p></section>
+
+  <div class="why">
+    <div><b>Why one process per agent</b><span>An agent spends almost all its time waiting on the model. On the BEAM a waiting process costs a few KB, so 16 or 1,600 cost the same to the machine. A crash stays inside its own task.</span></div>
+    <div><b>Why tests and odds</b><span>The agent's own suite is a hard fact. Clef's ship odds catch what tests miss: unrelated edits, missing parts. Code needs both before it ships.</span></div>
+    <div><b>What this does not show</b><span>One small repository. One model. Running 8 agents on the same task did not beat 1 here: every attempt passed. Breadth, not voting, is the win.</span></div>
+  </div>
+
+  <footer>Tasks and hidden tests: the "tally" benchmark from <a href="https://github.com/roboruby/fire_trident">fire_trident</a> (MIT), a 20-file TypeScript shop · Agents: Elixir processes, model claude-sonnet-5 via the OpenCode gateway · Judge: Clef (@cf/cloudflare/clef) on Workers AI · Cost at list price: $3 / $15 per M tokens</footer>
+</main>
+<script>
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+  const pct = (x) => `${Math.round((x ?? 0) * 100)}%`;
+  let tasks = new Map(), order = [], selected = null, started = 0, timer = 0, tools = 0, tests = 0;
+
+  const stateOf = (t) => (t.status !== "done" ? t.status : t.decision === "ship" ? (t.hidden === false ? "bad" : "ship") : "person");
+  const nowText = (t) => {
+    if (t.status === "idle") return "waiting to start";
+    if (t.status === "working") return `turn ${t.turns} · ${t.tool}${t.arg ? " " + t.arg : ""}`;
+    if (t.status === "judging") return "running its suite and asking Clef…";
+    return t.reason ?? "";
+  };
+  const pills = (t) => {
+    const out = [];
+    if (t.tests) out.push(`<span class="pill">${t.tests} test run${t.tests > 1 ? "s" : ""}</span>`);
+    if (t.visible != null) out.push(`<span class="pill ${t.visible ? "ok" : "no"}">suite ${t.visible ? "green" : "red"}</span>`);
+    if (t.p_ship != null && t.visible) out.push(`<span class="pill ${t.p_ship >= 0.85 ? "ok" : "hm"}">Clef ${pct(t.p_ship)}</span>`);
+    if (t.hidden != null) out.push(`<span class="pill ${t.hidden ? "ok" : "no"}">hidden ${t.hidden ? "pass" : "fail"}</span>`);
+    return out.join("");
+  };
+  const cardHtml = (t) => `<span class="id">${esc(t.id)}</span><span class="name">${esc(t.title)}</span><span class="now">${esc(nowText(t))}</span><span class="foot">${pills(t)}</span>`;
+
+  const render = () => {
+    $("tasks").innerHTML = order.map((id) => { const t = tasks.get(id); return `<button class="task${id === selected ? " sel" : ""}" id="t-${esc(id)}" data-id="${esc(id)}" data-s="${stateOf(t)}">${cardHtml(t)}</button>`; }).join("");
+  };
+  const update = (t) => {
+    tasks.set(t.id, t);
+    const el = document.getElementById(`t-${t.id}`);
+    if (el) { el.dataset.s = stateOf(t); el.innerHTML = cardHtml(t); }
+    if (t.id === selected) show(t.id);
+  };
+  const paint = () => {
+    const all = [...tasks.values()], done = all.filter((t) => t.status === "done");
+    const shipped = done.filter((t) => t.decision === "ship");
+    $("oShip").textContent = shipped.length;
+    $("oPerson").textContent = done.filter((t) => t.decision === "person").length;
+    $("oHidden").textContent = `${done.filter((t) => t.hidden === true).length}/${all.length}`;
+    $("oWrong").textContent = shipped.filter((t) => t.hidden !== true).length;
+    $("mDone").textContent = `${done.length}/${all.length}`;
+    $("mTools").textContent = tools;
+    $("mTests").textContent = tests;
+    const tin = all.reduce((s, t) => s + (t.tokens_in || 0), 0), tout = all.reduce((s, t) => s + (t.tokens_out || 0), 0);
+    $("mCost").textContent = `$${(tin * 3e-6 + tout * 15e-6).toFixed(2)}`;
+  };
+  const diffHtml = (d) => esc(d).split("\n").map((l) => l.startsWith("+++") || l.startsWith("---") || l.startsWith("diff ") || l.startsWith("@@") ? `<span class="hd">${l}</span>` : l.startsWith("+") ? `<span class="add">${l}</span>` : l.startsWith("-") ? `<span class="del">${l}</span>` : l).join("\n");
+  const show = (id) => {
+    const t = tasks.get(id); if (!t) return;
+    selected = id;
+    document.querySelectorAll(".task.sel").forEach((e) => e.classList.remove("sel"));
+    document.getElementById(`t-${id}`)?.classList.add("sel");
+    const facts = [`${t.turns} turns`, `${t.tests} test runs`, t.agent_ms ? `${(t.agent_ms / 1000).toFixed(1)} s agent time` : null, t.files?.length ? `${t.files.length} files: ${t.files.join(", ")}` : null, t.tokens_in ? `${Math.round(t.tokens_in / 1000)}k tokens in` : null].filter(Boolean);
+    const verdict = t.status === "done" ? `<p><b>${t.decision === "ship" ? "Shipped by code" : "Sent to a person"}.</b> ${esc(t.reason)}${t.hidden != null ? ` Hidden tests: <b>${t.hidden ? "pass" : "fail"}</b>.` : ""}</p>` : `<p>${esc(nowText(t))}</p>`;
+    $("detail").innerHTML = `<h2>${esc(t.id)}</h2><h3>${esc(t.title)}</h3><p>${esc(t.why)}</p><div class="facts">${facts.map((f) => `<span>${esc(f)}</span>`).join("")}</div>${verdict}${t.diff ? `<pre>${diffHtml(t.diff)}</pre>` : ""}`;
+  };
+  const tick = () => { $("clock").textContent = `${((performance.now() - started) / 1000).toFixed(1)} s`; timer = requestAnimationFrame(tick); };
+  const load = (snap) => {
+    order = snap.tasks.map((t) => t.id); tasks = new Map(snap.tasks.map((t) => [t.id, t]));
+    tools = snap.tasks.reduce((s, t) => s + (t.turns || 0), 0); tests = snap.tasks.reduce((s, t) => s + (t.tests || 0), 0);
+    render(); paint();
+    if (snap.running) { started = performance.now() - snap.elapsed; cancelAnimationFrame(timer); tick(); $("go").disabled = true; $("status").textContent = "a run is going"; }
+    else if (snap.ms) $("clock").textContent = `${(snap.ms / 1000).toFixed(1)} s`;
+  };
+
+  const ledger = (l) => {
+    $("lTotals").textContent = l.runs ? `${l.runs} run${l.runs === 1 ? "" : "s"} · ${l.agents} agents · $${l.usd.toFixed(2)} total · ${l.shipped} shipped · ${l.wrong_ships} wrong ships` : "no runs yet";
+    $("lRows").innerHTML = l.recent.map((r) => `<tr><td>${esc(String(r.at).replace("T", " ").replace("Z", ""))}</td><td>${r.agents}</td><td>${r.shipped}</td><td>${r.person}</td><td>${r.hidden_pass}/${r.agents}</td><td>${r.wrong_ships}</td><td>${r.seconds} s</td><td class="cost">$${Number(r.usd).toFixed(2)}</td></tr>`).join("");
+  };
+  fetch("/code/summary").then((r) => r.json()).then(load);
+  fetch("/code/ledger").then((r) => r.json()).then(ledger).catch(() => { $("lTotals").textContent = "run history unavailable"; });
+  const events = new EventSource("/code/events");
+  events.onmessage = (m) => {
+    const e = JSON.parse(m.data);
+    if (e.type === "start") { load({ tasks: e.tasks, running: true, elapsed: 0 }); tools = 0; tests = 0; $("status").textContent = "16 agents working"; }
+    else if (e.type === "task") { if (e.kind === "tool") tools++; if (e.kind === "tests") tests++; update(e.task); paint(); }
+    else if (e.type === "done") { cancelAnimationFrame(timer); $("clock").textContent = `${(e.ms / 1000).toFixed(1)} s`; e.tasks.forEach(update); paint(); $("go").disabled = false; $("status").textContent = `done: ${e.summary.shipped} shipped, ${e.summary.person} to a person, ${e.summary.hidden_pass}/16 hidden pass, $${e.summary.usd.toFixed(2)}`; if (e.ledger) ledger(e.ledger); }
+  };
+  $("tasks").addEventListener("click", (ev) => { const id = ev.target.closest(".task")?.dataset.id; if (id) show(id); });
+  $("go").addEventListener("click", async () => {
+    $("go").disabled = true; $("status").textContent = "starting…";
+    const r = await fetch("/code/start", { method: "POST" }).catch(() => null);
+    if (!r || r.status >= 400) { $("go").disabled = false; $("status").textContent = r ? await r.text() : "network error"; }
+  });
+</script>
+</body>
+</html>

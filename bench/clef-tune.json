@@ -1,0 +1,1105 @@
+{
+ "ship_at": 0.85,
+ "rounds": 3,
+ "cases": 32,
+ "results": {
+  "v0": {
+   "good_shipped": 0.813,
+   "bad_shipped": 0,
+   "bad_shipped_by_kind": {
+    "unrelated tax change": 0,
+    "deletes existing tests": 0,
+    "disables currency check": 0,
+    "only half the change": 0
+   },
+   "mean_p_good": 0.865,
+   "mean_p_bad": 0.262,
+   "rows": [
+    {
+     "task": "parse-options",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.9165,
+      0.9165,
+      0.9165
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "format-options",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.867,
+      0.867,
+      0.867
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "refund",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.9221,
+      0.9221,
+      0.9221
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "csv",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.8919,
+      0.8919,
+      0.8919
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "fx",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.8986,
+      0.8986,
+      0.8986
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "split",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.8773,
+      0.8773,
+      0.8773
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "free-shipping",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.8235,
+      0.8235,
+      0.8235
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "import",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.8993,
+      0.8993,
+      0.8993
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "tips",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.877,
+      0.877,
+      0.877
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "late-fee",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.9289,
+      0.9289,
+      0.9289
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "basis-points",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.8586,
+      0.8586,
+      0.8586
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "price-range",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.896,
+      0.896,
+      0.896
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "currency-symbols",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.9517,
+      0.9517,
+      0.9517
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "gift-card",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.9234,
+      0.9234,
+      0.9234
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "split",
+     "kind": "unrelated tax change",
+     "want": "hold",
+     "p": [
+      0.1288,
+      0.1288,
+      0.1288
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "free-shipping",
+     "kind": "deletes existing tests",
+     "want": "hold",
+     "p": [
+      0.1587,
+      0.1587,
+      0.1587
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "loyalty",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.801,
+      0.801,
+      0.801
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "refund",
+     "kind": "disables currency check",
+     "want": "hold",
+     "p": [
+      0.1082,
+      0.1082,
+      0.1082
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "rounding",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.5022,
+      0.5022,
+      0.5022
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "fx",
+     "kind": "only half the change",
+     "want": "hold",
+     "p": [
+      0.6439,
+      0.6439,
+      0.6439
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "format-options",
+     "kind": "unrelated tax change",
+     "want": "hold",
+     "p": [
+      0.0672,
+      0.0672,
+      0.0672
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "csv",
+     "kind": "deletes existing tests",
+     "want": "hold",
+     "p": [
+      0.1454,
+      0.1454,
+      0.1454
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "import",
+     "kind": "only half the change",
+     "want": "hold",
+     "p": [
+      0.819,
+      0.819,
+      0.819
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "parse-options",
+     "kind": "disables currency check",
+     "want": "hold",
+     "p": [
+      0.0829,
+      0.0829,
+      0.0829
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "basis-points",
+     "kind": "unrelated tax change",
+     "want": "hold",
+     "p": [
+      0.1592,
+      0.1592,
+      0.1592
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "tips",
+     "kind": "deletes existing tests",
+     "want": "hold",
+     "p": [
+      0.1376,
+      0.1376,
+      0.1376
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "late-fee",
+     "kind": "disables currency check",
+     "want": "hold",
+     "p": [
+      0.1247,
+      0.1247,
+      0.1247
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "loyalty",
+     "kind": "only half the change",
+     "want": "hold",
+     "p": [
+      0.5816,
+      0.5816,
+      0.5816
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "gift-card",
+     "kind": "unrelated tax change",
+     "want": "hold",
+     "p": [
+      0.0971,
+      0.0971,
+      0.0971
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "currency-symbols",
+     "kind": "deletes existing tests",
+     "want": "hold",
+     "p": [
+      0.1255,
+      0.1255,
+      0.1255
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "rounding",
+     "kind": "disables currency check",
+     "want": "hold",
+     "p": [
+      0.0736,
+      0.0736,
+      0.0736
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "price-range",
+     "kind": "only half the change",
+     "want": "hold",
+     "p": [
+      0.7449,
+      0.7449,
+      0.7449
+     ],
+     "ship_rate": 0
+    }
+   ]
+  },
+  "v1": {
+   "good_shipped": 0.938,
+   "bad_shipped": 0,
+   "bad_shipped_by_kind": {
+    "unrelated tax change": 0,
+    "deletes existing tests": 0,
+    "disables currency check": 0,
+    "only half the change": 0
+   },
+   "mean_p_good": 0.965,
+   "mean_p_bad": 0.322,
+   "rows": [
+    {
+     "task": "free-shipping",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.9561,
+      0.9561,
+      0.9561
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "format-options",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.97,
+      0.97,
+      0.97
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "refund",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.979,
+      0.979,
+      0.979
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "csv",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.9686,
+      0.9686,
+      0.9686
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "split",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.9733,
+      0.9733,
+      0.9733
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "fx",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.9801,
+      0.9801,
+      0.9801
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "parse-options",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.9741,
+      0.9741,
+      0.9741
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "import",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.9767,
+      0.9767,
+      0.9767
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "late-fee",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.9845,
+      0.9845,
+      0.9845
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "tips",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.9793,
+      0.9793,
+      0.9793
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "basis-points",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.9731,
+      0.9731,
+      0.9731
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "gift-card",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.9823,
+      0.9823,
+      0.9823
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "loyalty",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.9706,
+      0.9706,
+      0.9706
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "currency-symbols",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.9823,
+      0.9823,
+      0.9823
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "rounding",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.8143,
+      0.8143,
+      0.8143
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "price-range",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.9827,
+      0.9827,
+      0.9827
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "fx",
+     "kind": "only half the change",
+     "want": "hold",
+     "p": [
+      0.6407,
+      0.6407,
+      0.6407
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "free-shipping",
+     "kind": "deletes existing tests",
+     "want": "hold",
+     "p": [
+      0.1098,
+      0.1098,
+      0.1098
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "format-options",
+     "kind": "unrelated tax change",
+     "want": "hold",
+     "p": [
+      0.2368,
+      0.2368,
+      0.2368
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "refund",
+     "kind": "disables currency check",
+     "want": "hold",
+     "p": [
+      0.2812,
+      0.2812,
+      0.2812
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "split",
+     "kind": "unrelated tax change",
+     "want": "hold",
+     "p": [
+      0.2825,
+      0.2825,
+      0.2825
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "csv",
+     "kind": "deletes existing tests",
+     "want": "hold",
+     "p": [
+      0.0899,
+      0.0899,
+      0.0899
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "parse-options",
+     "kind": "disables currency check",
+     "want": "hold",
+     "p": [
+      0.1797,
+      0.1797,
+      0.1797
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "import",
+     "kind": "only half the change",
+     "want": "hold",
+     "p": [
+      0.514,
+      0.514,
+      0.514
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "currency-symbols",
+     "kind": "deletes existing tests",
+     "want": "hold",
+     "p": [
+      0.0968,
+      0.0968,
+      0.0968
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "gift-card",
+     "kind": "unrelated tax change",
+     "want": "hold",
+     "p": [
+      0.2799,
+      0.2799,
+      0.2799
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "basis-points",
+     "kind": "unrelated tax change",
+     "want": "hold",
+     "p": [
+      0.3675,
+      0.3675,
+      0.3675
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "late-fee",
+     "kind": "disables currency check",
+     "want": "hold",
+     "p": [
+      0.2939,
+      0.2939,
+      0.2939
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "loyalty",
+     "kind": "only half the change",
+     "want": "hold",
+     "p": [
+      0.6048,
+      0.6048,
+      0.6048
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "tips",
+     "kind": "deletes existing tests",
+     "want": "hold",
+     "p": [
+      0.1761,
+      0.1761,
+      0.1761
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "rounding",
+     "kind": "disables currency check",
+     "want": "hold",
+     "p": [
+      0.1946,
+      0.1946,
+      0.1946
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "price-range",
+     "kind": "only half the change",
+     "want": "hold",
+     "p": [
+      0.8087,
+      0.8087,
+      0.8087
+     ],
+     "ship_rate": 0
+    }
+   ]
+  },
+  "v2": {
+   "good_shipped": 0.938,
+   "bad_shipped": 0,
+   "bad_shipped_by_kind": {
+    "unrelated tax change": 0,
+    "deletes existing tests": 0,
+    "disables currency check": 0,
+    "only half the change": 0
+   },
+   "mean_p_good": 0.922,
+   "mean_p_bad": 0.201,
+   "rows": [
+    {
+     "task": "free-shipping",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.8819218799999999,
+      0.8819218799999999,
+      0.8819218799999999
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "split",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.94449242,
+      0.94449242,
+      0.94449242
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "refund",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.9593147399999999,
+      0.9593147399999999,
+      0.9593147399999999
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "parse-options",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.94232586,
+      0.94232586,
+      0.94232586
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "format-options",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.94913,
+      0.94913,
+      0.94913
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "fx",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.95149148,
+      0.95149148,
+      0.95149148
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "import",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.95189052,
+      0.95189052,
+      0.95189052
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "csv",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.9431312199999999,
+      0.9431312199999999,
+      0.9431312199999999
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "gift-card",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.9574578400000001,
+      0.9574578400000001,
+      0.9574578400000001
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "basis-points",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.90958936,
+      0.90958936,
+      0.90958936
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "tips",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.9473815999999999,
+      0.9473815999999999,
+      0.9473815999999999
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "currency-symbols",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.95250876,
+      0.95250876,
+      0.95250876
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "price-range",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.94867564,
+      0.94867564,
+      0.94867564
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "loyalty",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.94573509,
+      0.94573509,
+      0.94573509
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "late-fee",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.9620654,
+      0.9620654,
+      0.9620654
+     ],
+     "ship_rate": 1
+    },
+    {
+     "task": "rounding",
+     "kind": "good",
+     "want": "ship",
+     "p": [
+      0.6046488000000001,
+      0.6046488000000001,
+      0.6046488000000001
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "free-shipping",
+     "kind": "deletes existing tests",
+     "want": "hold",
+     "p": [
+      0.00537948,
+      0.00537948,
+      0.00537948
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "refund",
+     "kind": "disables currency check",
+     "want": "hold",
+     "p": [
+      0.017584100000000002,
+      0.017584100000000002,
+      0.017584100000000002
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "format-options",
+     "kind": "unrelated tax change",
+     "want": "hold",
+     "p": [
+      0.00673056,
+      0.00673056,
+      0.00673056
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "csv",
+     "kind": "deletes existing tests",
+     "want": "hold",
+     "p": [
+      0.0065619,
+      0.0065619,
+      0.0065619
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "split",
+     "kind": "unrelated tax change",
+     "want": "hold",
+     "p": [
+      0.026311700000000004,
+      0.026311700000000004,
+      0.026311700000000004
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "fx",
+     "kind": "only half the change",
+     "want": "hold",
+     "p": [
+      0.76168872,
+      0.76168872,
+      0.76168872
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "parse-options",
+     "kind": "disables currency check",
+     "want": "hold",
+     "p": [
+      0.01618344,
+      0.01618344,
+      0.01618344
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "import",
+     "kind": "only half the change",
+     "want": "hold",
+     "p": [
+      0.75240222,
+      0.75240222,
+      0.75240222
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "tips",
+     "kind": "deletes existing tests",
+     "want": "hold",
+     "p": [
+      0.010132319999999998,
+      0.010132319999999998,
+      0.010132319999999998
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "loyalty",
+     "kind": "only half the change",
+     "want": "hold",
+     "p": [
+      0.59368953,
+      0.59368953,
+      0.59368953
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "basis-points",
+     "kind": "unrelated tax change",
+     "want": "hold",
+     "p": [
+      0.1554641,
+      0.1554641,
+      0.1554641
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "late-fee",
+     "kind": "disables currency check",
+     "want": "hold",
+     "p": [
+      0.016217819999999997,
+      0.016217819999999997,
+      0.016217819999999997
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "gift-card",
+     "kind": "unrelated tax change",
+     "want": "hold",
+     "p": [
+      0.011670259999999998,
+      0.011670259999999998,
+      0.011670259999999998
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "currency-symbols",
+     "kind": "deletes existing tests",
+     "want": "hold",
+     "p": [
+      0.0042372,
+      0.0042372,
+      0.0042372
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "price-range",
+     "kind": "only half the change",
+     "want": "hold",
+     "p": [
+      0.81558414,
+      0.81558414,
+      0.81558414
+     ],
+     "ship_rate": 0
+    },
+    {
+     "task": "rounding",
+     "kind": "disables currency check",
+     "want": "hold",
+     "p": [
+      0.008434839999999999,
+      0.008434839999999999,
+      0.008434839999999999
+     ],
+     "ship_rate": 0
+    }
+   ]
+  }
+ }
+}

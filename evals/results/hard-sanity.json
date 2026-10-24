@@ -1,0 +1,92 @@
+{
+  "specs": [
+    {
+      "max_tokens": 4000,
+      "max_turns": 30,
+      "model": "claude-sonnet-5",
+      "name": "sonnet5-full",
+      "price_per_m": {
+        "in": 3,
+        "out": 15
+      },
+      "prompt": "default",
+      "tools": [
+        "list_files",
+        "read_file",
+        "write_file",
+        "edit_file",
+        "grep",
+        "run_tests",
+        "done"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "hidden": true,
+      "visible": true,
+      "spec": "sonnet5-full",
+      "task": "catalog-search",
+      "ms": 30452,
+      "outcome": "done",
+      "turns": 8,
+      "p_ship": 0.9483,
+      "tokens_in": 42541,
+      "tokens_out": 3164,
+      "usd": 0.1751,
+      "repeat": 1,
+      "ship": true,
+      "tests_run": 1
+    },
+    {
+      "hidden": true,
+      "visible": true,
+      "spec": "sonnet5-full",
+      "task": "tax-cent-bug",
+      "ms": 54928,
+      "outcome": "done",
+      "turns": 9,
+      "p_ship": 0.9564,
+      "tokens_in": 71517,
+      "tokens_out": 4942,
+      "usd": 0.2887,
+      "repeat": 1,
+      "ship": true,
+      "tests_run": 1
+    }
+  ],
+  "tasks": [
+    "tax-cent-bug",
+    "catalog-search"
+  ],
+  "repeats": 1,
+  "wall_ms": 56407,
+  "cells": 2,
+  "by_spec": [
+    {
+      "spec": "sonnet5-full",
+      "tools": [
+        "list_files",
+        "read_file",
+        "write_file",
+        "edit_file",
+        "grep",
+        "run_tests",
+        "done"
+      ],
+      "shipped": 2,
+      "hidden_pass": 2,
+      "usd": 0.46,
+      "model": "claude-sonnet-5",
+      "cells": 2,
+      "crashed_or_model_error": 0,
+      "held_right": 0,
+      "hidden_pass_rate": 1.0,
+      "max_s": 54.9,
+      "mean_turns": 8.5,
+      "p50_s": 54.9,
+      "shipped_wrong": 0,
+      "usd_per_pass": 0.232
+    }
+  ]
+}

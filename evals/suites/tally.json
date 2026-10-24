@@ -1,0 +1,5 @@
+{
+  "name": "tally",
+  "bench": "bench/tally",
+  "tasks": "all"
+}
